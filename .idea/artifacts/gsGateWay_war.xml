@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gsGateWay:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>gsGateWay</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="gsGateWay.war">
+      <element id="artifact" artifact-name="gsGateWay:war exploded" />
+    </root>
+  </artifact>
+</component>
