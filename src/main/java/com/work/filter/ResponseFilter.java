@@ -19,9 +19,6 @@ public class ResponseFilter extends ZuulFilter {
 		String uri = request.getRequestURI();
 		// TODO Auto-generated method stub
 
-		if (uri.contains("WXYYNEW/html") || uri.contains("WXYY_SJ/html")) {// 网上预约静态文件
-			context.addZuulResponseHeader("Content-Location", "");
-		}
 		return null;
 	}
 
@@ -30,10 +27,7 @@ public class ResponseFilter extends ZuulFilter {
 	public boolean shouldFilter() {
 		RequestContext context = RequestContext.getCurrentContext();
 		HttpServletRequest request = context.getRequest();
-		String uri = request.getRequestURI();
-		if (uri.contains("WXYYNEW") || uri.contains("WXYY_SJ")) {// 网上预约
-			return true;
-		}
+		
 		return false;
 	}
 
